@@ -132,8 +132,8 @@ grad_x, grad_y = Edge_Detection(Sobel_Image=edges, threshold=0, height=rows, wid
                                 Vanishing_x_Accumulator=Vanishing_x_Accumulator,
                                 Vanishing_y=Vanishing_y,
                                 Orientation_Accumulator=Orientation_Accumulator)
-grad_x = grad_x * mask.astype(np.float)
-grad_y = grad_y * mask.astype(np.float)
+grad_x = grad_x * mask.astype(np.float64)
+grad_y = grad_y * mask.astype(np.float64)
 Vanishing_x_Accumulator = Vanishing_x_Accumulator * mask[Vanishing_y0:]
 
 plt.figure("Sparse Vpx")
